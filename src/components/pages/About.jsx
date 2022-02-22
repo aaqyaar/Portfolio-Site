@@ -1,13 +1,14 @@
 import React from "react";
 import Pulse from "react-reveal/Pulse";
-
+import Sides from "./layout/Sides";
+import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 export default function About() {
   return (
-    <section id="About" className="md:mt-48 max-w-full mt-28">
+    <section id="About" className="relative md:mt-48 max-w-full mt-28">
       <div>
         <div
           id="About"
-          className="mb-16 font-montserrat flex items-center justify-center"
+          className="mb-16 font-poppins flex items-center justify-center"
         >
           <h1 className=" border-b-4 rounded text-4xl font-bold tracking-wider inline-block border-gray-700 text-gray-700">
             About Me
@@ -22,41 +23,48 @@ export default function About() {
           <Pulse>
             <div id="content" className="font-poppins">
               <h1 className="text-5xl hidden md:block tracking-wider md:mx-0 mx-4 font-semibold text-gray-800">
-                Who am I
+                Who am i ?
               </h1>
               <hr />
-              <p className="text-lg w-full text-center md:text-left tracking-wide font-montserrat md:py-0 py-4 px-4 md:px-0">
+              <p className="text-lg w-full text-center md:text-left tracking-wide font-poppins md:py-0 py-4 px-4 md:px-0">
                 I am Abdi Zamed, A Full Stack Web Dev based in Mogadishu. My
                 Skill I learn't in Tiigsi Technology which is the best platform
                 to learn in MERN Stack Developer in east africa so join it and
                 get a skill.
               </p>
               <article className="mt-2">
-                <div className="font-montserrat text-center  md:text-left mb-4 md:w-96 ">
-                  <h1 className="font-poppins border-b-2 text-xl inline cursor-pointer border-gray-700 font-semibold text-gray-800">
+                <div className="font-montserrat text-center  md:text-left mb-4 md:w-96">
+                  <h1 className="font-poppins border-b-2 text-xl inline  border-gray-700 font-semibold text-gray-800">
                     Main Skills
                   </h1>
 
-                  <p className="text-lg leading-8 mt-4 md:mt-0 text-gray-600">
-                    <span className="text-gray-800 font-poppins">
-                      Front-end Dev
-                    </span>
-                    - React JS
-                    <br />
-                    <span className="text-gray-800 font-poppins">
-                      Back-end Dev
-                    </span>
-                    - Node JS & ExpressJS
-                    <br />
-                    <span className="text-gray-800 font-poppins">Database</span>
-                    - SQL Server & MongoDB <br /> & MySQL.
-                  </p>
+                  <div className="text-lg  mt-4 md:mt-0 text-gray-600">
+                    <div className="flex items-center justify-center md:justify-start mt-4">
+                      <FaReact className="w-7 h-7 text-slate-800" />
+                      <span className="text-gray-800 mx-2 font-poppins">
+                        React JS for Client Side
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-center md:justify-start mt-3">
+                      <FaNodeJs className="w-7 h-7 text-slate-800" />
+                      <span className="text-gray-800 font-poppins mx-2">
+                        Node JS for Server Side
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-center md:justify-start mt-3">
+                      <FaDatabase className="w-7 h-7 text-slate-800" />
+                      <span className="text-gray-800 mx-2 font-poppins">
+                        SQL Server & MongoDB & MySQL.
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </article>
             </div>
           </Pulse>
         </div>
       </div>
+      <Sides />
     </section>
   );
 }
