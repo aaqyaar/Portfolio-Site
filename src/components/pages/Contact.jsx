@@ -23,10 +23,10 @@ function Contact() {
   const onSubmit = (data) => {
     emailjs
       .sendForm(
-        "service_rx35ob5",
-        "template_rnebbns",
+        serviceID,
+        templateID,
         form.current,
-        "user_Derx2ROYDdcabDsRBqvB0"
+        userID
       )
       .then(
         (result) => {
